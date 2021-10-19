@@ -1,6 +1,15 @@
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+function getRandomNum(min, max) {
+  if (min<0) {min=0;}
+  if (max<min) {max=min;}
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-getRandomIntInclusive(-5, 45);
+getRandomNum(-5, 45);
+
+
+function getRandomFixed(min, max, fixed) {
+  if (min<0) {min=0;}
+  if (max<min) {max=min;}
+  if (fixed<0) {fixed=0;}
+  return parseFloat(Math.floor(Math.random() * (max - min)).toFixed(fixed));
+}
+getRandomFixed(-5, 45, 7)
