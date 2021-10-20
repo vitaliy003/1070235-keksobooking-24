@@ -1,7 +1,6 @@
-function getRandomNum(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;}
-getRandomNum(-5, 45);
-
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;}
+getRandomInt(-5, 5);
 
 function getRandomFixed(min, max, fixed) {
   if (min<0) {min=0;}
